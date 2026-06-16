@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="'Segoe UI', 'Noto Sans SC', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="emerald" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes fadeUp { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+    @keyframes pulse { 0%,100% { opacity:.5 } 50% { opacity:1 } }
+    .card { animation: fadeUp .5s ease both }
+    .c0{animation-delay:.1s}.c1{animation-delay:.15s}.c2{animation-delay:.2s}.c3{animation-delay:.25s}.c4{animation-delay:.3s}
+    .c5{animation-delay:.4s}.c6{animation-delay:.45s}.c7{animation-delay:.5s}.c8{animation-delay:.55s}.c9{animation-delay:.6s}
+    .c10{animation-delay:.65s}.c11{animation-delay:.7s}
+    .title { animation: fadeIn .6s ease both }
+    .section { animation: fadeIn .6s ease .3s both }
+    .dot { animation: pulse 2s ease infinite }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <g class="title">
+    <text x="400" y="35" text-anchor="middle" fill="#8b949e" font-size="11" letter-spacing="3">OPEN SOURCE SKILL MATRIX</text>
+    <text x="400" y="58" text-anchor="middle" fill="#c9d1d9" font-size="16" font-weight="600">开源技能矩阵</text>
+  </g>
+
+  <!-- ═══ Section: Core Engineering ═══ -->
+  <g class="section">
+    <rect x="30" y="78" width="740" height="3" rx="1.5" fill="url(#accent)" opacity=".3"/>
+    <text x="40" y="100" fill="#6366f1" font-size="12" font-weight="600">核心工程技能</text>
+    <text x="40" y="115" fill="#8b949e" font-size="10">5 repositories · DSPBRSE methodology core</text>
+  </g>
+
+  <!-- Card: tianshu -->
+  <g class="card c0">
+    <rect x="30" y="130" width="358" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="30" y="130" width="4" height="72" rx="2" fill="#6366f1"/>
+    <text x="50" y="152" fill="#6366f1" font-size="13" font-weight="700">tianshu</text>
+    <text x="50" y="168" fill="#c9d1d9" font-size="10.5">7 阶段全生命周期方法论引擎</text>
+    <text x="50" y="186" fill="#8b949e" font-size="9.5">清晰度门禁 · 节奏卡牌 · 自进化闭环</text>
+    <circle cx="362" cy="145" r="4" fill="#6366f1" class="dot"/>
+  </g>
+
+  <!-- Card: awkn-engineer -->
+  <g class="card c1">
+    <rect x="412" y="130" width="358" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="412" y="130" width="4" height="72" rx="2" fill="#a855f7"/>
+    <text x="432" y="152" fill="#a855f7" font-size="13" font-weight="700">awkn-engineer</text>
+    <text x="432" y="168" fill="#c9d1d9" font-size="10.5">Build 阶段唯一执行者</text>
+    <text x="432" y="186" fill="#8b949e" font-size="9.5">8 阶段执行脊 · TDD 强制 · 自愈循环</text>
+    <circle cx="744" cy="145" r="4" fill="#a855f7" class="dot" style="animation-delay:.3s"/>
+  </g>
+
+  <!-- Card: awkn-review -->
+  <g class="card c2">
+    <rect x="30" y="214" width="358" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="30" y="214" width="4" height="72" rx="2" fill="#c084fc"/>
+    <text x="50" y="236" fill="#c084fc" font-size="13" font-weight="700">awkn-review</text>
+    <text x="50" y="252" fill="#c9d1d9" font-size="10.5">Review 阶段质量守门人</text>
+    <text x="50" y="270" fill="#8b949e" font-size="9.5">125 子技能 · AI 审核 · 供应链安全</text>
+    <circle cx="362" cy="229" r="4" fill="#c084fc" class="dot" style="animation-delay:.6s"/>
+  </g>
+
+  <!-- Card: awkn-execution-check -->
+  <g class="card c3">
+    <rect x="412" y="214" width="358" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="412" y="214" width="4" height="72" rx="2" fill="#e879f9"/>
+    <text x="432" y="236" fill="#e879f9" font-size="13" font-weight="700">awkn-execution-check</text>
+    <text x="432" y="252" fill="#c9d1d9" font-size="10.5">变更前 5 步门禁 RLPVV</text>
+    <text x="432" y="270" fill="#8b949e" font-size="9.5">爆炸半径评估 · 知识图谱 · 跳步检测</text>
+    <circle cx="744" cy="229" r="4" fill="#e879f9" class="dot" style="animation-delay:.9s"/>
+  </g>
+
+  <!-- Card: awkn-agent-design -->
+  <g class="card c4">
+    <rect x="221" y="298" width="358" height="72" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="221" y="298" width="4" height="72" rx="2" fill="#f0abfc"/>
+    <text x="241" y="320" fill="#f0abfc" font-size="13" font-weight="700">awkn-agent-design</text>
+    <text x="241" y="336" fill="#c9d1d9" font-size="10.5">Agent 架构设计范式</text>
+    <text x="241" y="354" fill="#8b949e" font-size="9.5">17 模块 · 逆向工程手册 · 黑盒探测</text>
+    <circle cx="553" cy="313" r="4" fill="#f0abfc" class="dot" style="animation-delay:1.2s"/>
+  </g>
+
+  <!-- ═══ Section: Product Tools ═══ -->
+  <g class="section">
+    <rect x="30" y="390" width="740" height="3" rx="1.5" fill="url(#emerald)" opacity=".3"/>
+    <text x="40" y="414" fill="#10b981" font-size="12" font-weight="600">产品应用工具</text>
+    <text x="40" y="429" fill="#8b949e" font-size="10">7 repositories · practical tools and applications</text>
+  </g>
+
+  <!-- Product Card: awkn-Feel -->
+  <g class="card c5">
+    <rect x="30" y="444" width="240" height="65" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="46" y="464" fill="#10b981" font-size="12" font-weight="700">awkn-Feel</text>
+    <text x="46" y="480" fill="#c9d1d9" font-size="9.5">情感与情绪感知分析工具</text>
+    <text x="46" y="495" fill="#8b949e" font-size="9">Python</text>
+  </g>
+
+  <!-- Product Card: life-choice -->
+  <g class="card c6">
+    <rect x="280" y="444" width="240" height="65" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="296" y="464" fill="#10b981" font-size="12" font-weight="700">life-choice</text>
+    <text x="296" y="480" fill="#c9d1d9" font-size="9.5">人生决策宗师 Web 应用</text>
+    <text x="296" y="495" fill="#8b949e" font-size="9">NestJS + Prisma + React 18</text>
+  </g>
+
+  <!-- Product Card: solo-skill-booster -->
+  <g class="card c7">
+    <rect x="530" y="444" width="240" height="65" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="546" y="464" fill="#10b981" font-size="12" font-weight="700">solo-skill-booster</text>
+    <text x="546" y="480" fill="#c9d1d9" font-size="9.5">SOLO 技能创作赛提分官</text>
+    <text x="546" y="495" fill="#8b949e" font-size="9">Markdown SKILL.md</text>
+  </g>
+
+  <!-- Product Card: SOLO-Skill -->
+  <g class="card c8">
+    <rect x="30" y="520" width="240" height="65" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="46" y="540" fill="#10b981" font-size="12" font-weight="700">SOLO-Skill</text>
+    <text x="46" y="556" fill="#c9d1d9" font-size="9.5">SOLO 技能创作赛框架</text>
+    <text x="46" y="571" fill="#8b949e" font-size="9">Markdown SKILL.md</text>
+  </g>
+
+  <!-- Product Card: subtitle -->
+  <g class="card c9">
+    <rect x="280" y="520" width="240" height="65" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="296" y="540" fill="#10b981" font-size="12" font-weight="700">subtitle</text>
+    <text x="296" y="556" fill="#c9d1d9" font-size="9.5">AI 视频字幕处理</text>
+    <text x="296" y="571" fill="#8b949e" font-size="9">Python + WhisperX</text>
+  </g>
+
+  <!-- Product Card: god + AWKN-LAB combined row -->
+  <g class="card c10">
+    <rect x="530" y="520" width="115" height="65" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="546" y="540" fill="#10b981" font-size="12" font-weight="700">god</text>
+    <text x="546" y="556" fill="#c9d1d9" font-size="9">命运骰子</text>
+    <text x="546" y="571" fill="#8b949e" font-size="8.5">HTML/CSS/JS</text>
+  </g>
+
+  <g class="card c11">
+    <rect x="655" y="520" width="115" height="65" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="671" y="540" fill="#10b981" font-size="11" font-weight="700">AWKN-LAB</text>
+    <text x="671" y="556" fill="#c9d1d9" font-size="9">核心团队入口</text>
+    <text x="671" y="571" fill="#8b949e" font-size="8.5">项目总集</text>
+  </g>
+
+</svg>

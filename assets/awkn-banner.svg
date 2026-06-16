@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="50%" style="stop-color:#1a1a3e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20"/>
+    </filter>
+    <filter id="star-glow">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#a5b4fc" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#6366f1" flood-opacity="0.4"/>
+    </filter>
+    <font-face font-family="system-ui"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="280" fill="url(#bg)" rx="12"/>
+
+  <!-- Glow orbs -->
+  <circle cx="150" cy="140" r="120" fill="url(#glow)" filter="url(#blur)" opacity="0.5"/>
+  <circle cx="650" cy="140" r="100" fill="#8b5cf6" filter="url(#blur)" opacity="0.15"/>
+
+  <!-- Grid lines -->
+  <g stroke="#6366f1" stroke-opacity="0.08" stroke-width="0.5">
+    <line x1="0" y1="70" x2="800" y2="70"/>
+    <line x1="0" y1="140" x2="800" y2="140"/>
+    <line x1="0" y1="210" x2="800" y2="210"/>
+    <line x1="200" y1="0" x2="200" y2="280"/>
+    <line x1="400" y1="0" x2="400" y2="280"/>
+    <line x1="600" y1="0" x2="600" y2="280"/>
+  </g>
+
+  <!-- Big Dipper constellation lines -->
+  <g stroke="#6366f1" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round">
+    <!-- Bowl: 天枢 → 天璇 → 天玑 → 天权 → back to 天枢 -->
+    <line x1="140" y1="230" x2="230" y2="248"/>
+    <line x1="230" y1="248" x2="340" y2="245"/>
+    <line x1="340" y1="245" x2="420" y2="228"/>
+    <line x1="420" y1="228" x2="140" y2="230"/>
+    <!-- Handle: 天权 → 玉衡 → 开阳 → 摇光 -->
+    <line x1="420" y1="228" x2="520" y2="222"/>
+    <line x1="520" y1="222" x2="620" y2="235"/>
+    <line x1="620" y1="235" x2="720" y2="225"/>
+  </g>
+
+  <!-- Big Dipper stars (★) with glow -->
+  <g filter="url(#star-glow)">
+    <!-- 天枢 (Dubhe) - bowl top-left -->
+    <text x="140" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#c4b5fd">★</text>
+    <!-- 天璇 (Merak) - bowl bottom-left -->
+    <text x="230" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#c4b5fd">★</text>
+    <!-- 天玑 (Phecda) - bowl bottom-right -->
+    <text x="340" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#c4b5fd">★</text>
+    <!-- 天权 (Megrez) - bowl top-right / handle start -->
+    <text x="420" y="233" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#a5b4fc">★</text>
+    <!-- 玉衡 (Alioth) - handle -->
+    <text x="520" y="227" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#c4b5fd">★</text>
+    <!-- 开阳 (Mizar) - handle -->
+    <text x="620" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#c4b5fd">★</text>
+    <!-- 摇光 (Alkaid) - handle end -->
+    <text x="720" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#c4b5fd">★</text>
+  </g>
+
+  <!-- Star labels -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#6366f1" opacity="0.6" text-anchor="middle">
+    <text x="140" y="256">天枢</text>
+    <text x="230" y="270">天璇</text>
+    <text x="340" y="268">天玑</text>
+    <text x="420" y="252">天权</text>
+    <text x="520" y="246">玉衡</text>
+    <text x="620" y="258">开阳</text>
+    <text x="720" y="248">摇光</text>
+  </g>
+
+  <!-- Logo mark -->
+  <g transform="translate(60, 60)">
+    <!-- Hexagon shape -->
+    <polygon points="30,0 55,14 55,42 30,56 5,42 5,14" fill="none" stroke="url(#accent)" stroke-width="2"/>
+    <text x="30" y="36" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="url(#accent)">A</text>
+  </g>
+
+  <!-- Main title -->
+  <text x="130" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+    AWKN Lab
+  </text>
+
+  <!-- Subtitle -->
+  <text x="130" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#a1a1aa" font-weight="400">
+    Decision Intelligence Laboratory
+  </text>
+
+  <!-- Tagline -->
+  <text x="130" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#71717a">
+    天枢 · 北斗七星导航 AI 工程全生命周期
+  </text>
+
+  <!-- Stats bar -->
+  <g transform="translate(130, 170)">
+    <rect x="0" y="0" width="80" height="28" rx="6" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-opacity="0.3" stroke-width="0.5"/>
+    <text x="40" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#a5b4fc" font-weight="600">82 Skills</text>
+
+    <rect x="90" y="0" width="88" height="28" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.3" stroke-width="0.5"/>
+    <text x="134" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#6ee7b7" font-weight="600">20+ Products</text>
+
+    <rect x="188" y="0" width="88" height="28" rx="6" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="0.5"/>
+    <text x="232" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fcd34d" font-weight="600">⭐ 天枢 v3.2</text>
+
+    <rect x="286" y="0" width="85" height="28" rx="6" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-opacity="0.3" stroke-width="0.5"/>
+    <text x="328" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fca5a5" font-weight="600">5 Runtimes</text>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800">
+  <defs>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <style>
+      @keyframes grow { from{width:0} to{width:var(--w)} }
+      @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+      @keyframes countUp { 0%{opacity:0} 100%{opacity:1} }
+      .bar { animation: grow 1.5s cubic-bezier(0.16,1,0.3,1) forwards; }
+      .bar:nth-child(1) { animation-delay: 0.1s; }
+      .bar:nth-child(2) { animation-delay: 0.3s; }
+      .bar:nth-child(3) { animation-delay: 0.5s; }
+      .bar:nth-child(4) { animation-delay: 0.7s; }
+      .bar:nth-child(5) { animation-delay: 0.9s; }
+      .bar:nth-child(6) { animation-delay: 1.1s; }
+      .num { fill: #e8e8f0; font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 700; opacity: 0; animation: fadeIn 0.5s ease forwards; }
+      .num:nth-of-type(1) { animation-delay: 1.6s; }
+      .num:nth-of-type(2) { animation-delay: 1.8s; }
+      .num:nth-of-type(3) { animation-delay: 2.0s; }
+      .num:nth-of-type(4) { animation-delay: 2.2s; }
+      .num:nth-of-type(5) { animation-delay: 2.4s; }
+      .num:nth-of-type(6) { animation-delay: 2.6s; }
+      .lbl { fill: #8888a0; font-family: 'Noto Sans SC', system-ui; font-size: 11px; }
+      .icon { fill: #6366f1; font-size: 20px; opacity: 0; animation: fadeIn 0.3s ease forwards; }
+    </style>
+  </defs>
+
+  <rect width="800" height="200" fill="#0a0a10" rx="12"/>
+
+  <!-- Row 1 -->
+  <text x="30" y="45" class="icon" style="animation-delay:0.1s">📦</text>
+  <text x="55" y="46" class="lbl">可组合技能</text>
+  <rect x="160" y="32" width="0" height="18" rx="4" fill="url(#barGrad)" opacity="0.6" class="bar" style="--w:280px"/>
+  <text x="450" y="48" class="num" style="animation-delay:1.6s">82</text>
+
+  <!-- Row 2 -->
+  <text x="30" y="80" class="icon" style="animation-delay:0.3s">🏗️</text>
+  <text x="55" y="81" class="lbl">产品线</text>
+  <rect x="160" y="67" width="0" height="18" rx="4" fill="url(#barGrad)" opacity="0.6" class="bar" style="--w:200px"/>
+  <text x="370" y="83" class="num" style="animation-delay:1.8s">20+</text>
+
+  <!-- Row 3 -->
+  <text x="30" y="115" class="icon" style="animation-delay:0.5s">🧠</text>
+  <text x="55" y="116" class="lbl">AI 运行时</text>
+  <rect x="160" y="102" width="0" height="18" rx="4" fill="url(#barGrad)" opacity="0.6" class="bar" style="--w:60px"/>
+  <text x="230" y="118" class="num" style="animation-delay:2.0s">5</text>
+
+  <!-- Row 4 -->
+  <text x="30" y="150" class="icon" style="animation-delay:0.7s">✅</text>
+  <text x="55" y="151" class="lbl">单元测试通过</text>
+  <rect x="160" y="137" width="0" height="18" rx="4" fill="url(#barGrad)" opacity="0.6" class="bar" style="--w:400px"/>
+  <text x="570" y="153" class="num" style="animation-delay:2.2s">156</text>
+
+  <!-- Row 5 -->
+  <text x="30" y="185" class="icon" style="animation-delay:0.9s">🔄</text>
+  <text x="55" y="186" class="lbl">自进化实施率</text>
+  <rect x="160" y="172" width="0" height="18" rx="4" fill="url(#barGrad)" opacity="0.6" class="bar" style="--w:360px"/>
+  <text x="530" y="188" class="num" style="animation-delay:2.4s">90%</text>
+
+  <!-- Row 6 -->
+  <text x="530" y="45" class="icon" style="animation-delay:1.1s">⏱️</text>
+  <text x="555" y="46" class="lbl">实战小时数</text>
+  <rect x="640" y="32" width="0" height="18" rx="4" fill="url(#barGrad)" opacity="0.6" class="bar" style="--w:120px"/>
+  <text x="770" y="48" class="num" style="animation-delay:2.6s">500+</text>
+</svg>

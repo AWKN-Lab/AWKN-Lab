@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="'Segoe UI', 'Noto Sans SC', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="emerald" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f87171"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes orbitPulse { 0%,100% { stroke-opacity:.2 } 50% { stroke-opacity:.5 } }
+    @keyframes scaleIn { from { transform:scale(0); opacity:0 } to { transform:scale(1); opacity:1 } }
+    @keyframes dashFlow { from { stroke-dashoffset:20 } to { stroke-dashoffset:0 } }
+    .hub { animation: scaleIn .6s ease both; transform-origin:400px 200px }
+    .branch { animation: fadeIn .5s ease both }
+    .b0{animation-delay:.2s}.b1{animation-delay:.3s}.b2{animation-delay:.4s}.b3{animation-delay:.5s}
+    .card { animation: fadeUp .5s ease both }
+    .c0{animation-delay:.3s}.c1{animation-delay:.35s}.c2{animation-delay:.4s}.c3{animation-delay:.45s}
+    .c4{animation-delay:.5s}.c5{animation-delay:.55s}
+    .orbit { animation: orbitPulse 4s ease infinite }
+    .conn { stroke-dasharray:6 4; animation: dashFlow 1.5s linear infinite }
+    .title { animation: fadeIn .6s ease both }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <g class="title">
+    <text x="400" y="35" text-anchor="middle" fill="#8b949e" font-size="11" letter-spacing="3">PRODUCT ECOSYSTEM</text>
+    <text x="400" y="58" text-anchor="middle" fill="#c9d1d9" font-size="16" font-weight="600">产品矩阵 · 全景图</text>
+  </g>
+
+  <!-- ═══ Hub Diagram ═══ -->
+  <!-- Orbit rings -->
+  <circle cx="400" cy="195" r="70" fill="none" stroke="#30363d" stroke-width="1" class="orbit"/>
+  <circle cx="400" cy="195" r="130" fill="none" stroke="#30363d" stroke-width=".5" class="orbit" style="animation-delay:1s"/>
+
+  <!-- Central Hub: AWKN Agent -->
+  <g class="hub">
+    <circle cx="400" cy="195" r="42" fill="#6366f1" opacity=".15"/>
+    <circle cx="400" cy="195" r="42" fill="none" stroke="#6366f1" stroke-width="2"/>
+    <text x="400" y="188" text-anchor="middle" fill="#c9d1d9" font-size="13" font-weight="700">AWKN</text>
+    <text x="400" y="204" text-anchor="middle" fill="#8b949e" font-size="10">Agent</text>
+    <text x="400" y="216" text-anchor="middle" fill="#6366f1" font-size="8">核心平台</text>
+  </g>
+
+  <!-- Branch: Products (top-right) -->
+  <g class="branch b0">
+    <line x1="435" y1="170" x2="560" y2="110" stroke="#6366f1" stroke-width="1" class="conn" opacity=".5"/>
+    <rect x="560" y="88" width="210" height="52" rx="8" fill="#161b22" stroke="#6366f1" stroke-width="1"/>
+    <text x="575" y="108" fill="#c9d1d9" font-size="11" font-weight="600">张半山 · 人生决策宗师</text>
+    <text x="575" y="124" fill="#8b949e" font-size="9">NestJS + Prisma + React 18</text>
+  </g>
+
+  <g class="branch b1">
+    <line x1="442" y1="195" x2="560" y2="165" stroke="#a855f7" stroke-width="1" class="conn" opacity=".5" style="animation-delay:.3s"/>
+    <rect x="560" y="148" width="210" height="52" rx="8" fill="#161b22" stroke="#a855f7" stroke-width="1"/>
+    <text x="575" y="168" fill="#c9d1d9" font-size="11" font-weight="600">ANNIE 健身教练</text>
+    <text x="575" y="184" fill="#8b949e" font-size="9">Vue.js + MiniMax + ONNX</text>
+  </g>
+
+  <g class="branch b2">
+    <line x1="435" y1="220" x2="560" y2="220" stroke="#ef4444" stroke-width="1" class="conn" opacity=".5" style="animation-delay:.6s"/>
+    <rect x="560" y="208" width="210" height="52" rx="8" fill="#161b22" stroke="#ef4444" stroke-width="1"/>
+    <text x="575" y="228" fill="#c9d1d9" font-size="11" font-weight="600">PRI 决策枢密院</text>
+    <text x="575" y="244" fill="#8b949e" font-size="9">PRD 全流程 · 12 子技能</text>
+  </g>
+
+  <!-- Branch: Infrastructure (left) -->
+  <g class="branch b1">
+    <line x1="358" y1="180" x2="240" y2="110" stroke="#10b981" stroke-width="1" class="conn" opacity=".5" style="animation-delay:.2s"/>
+    <circle cx="240" cy="110" r="28" fill="#10b981" opacity=".1"/>
+    <circle cx="240" cy="110" r="28" fill="none" stroke="#10b981" stroke-width="1.5"/>
+    <text x="240" y="106" text-anchor="middle" fill="#10b981" font-size="10" font-weight="600">基础</text>
+    <text x="240" y="118" text-anchor="middle" fill="#10b981" font-size="10" font-weight="600">设施</text>
+  </g>
+
+  <!-- Infrastructure sub-nodes -->
+  <g class="branch b2">
+    <line x1="215" y1="95" x2="100" y2="78" stroke="#10b981" stroke-width=".8" class="conn" opacity=".3" style="animation-delay:.4s"/>
+    <rect x="20" y="65" width="145" height="36" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="92" y="82" text-anchor="middle" fill="#c9d1d9" font-size="10" font-weight="600">Hindsight</text>
+    <text x="92" y="94" text-anchor="middle" fill="#8b949e" font-size="8.5">语义记忆引擎 · SOTA</text>
+  </g>
+
+  <g class="branch b3">
+    <line x1="215" y1="110" x2="100" y2="118" stroke="#10b981" stroke-width=".8" class="conn" opacity=".3" style="animation-delay:.6s"/>
+    <rect x="20" y="106" width="145" height="36" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="92" y="122" text-anchor="middle" fill="#c9d1d9" font-size="10" font-weight="600">记忆系统</text>
+    <text x="92" y="134" text-anchor="middle" fill="#8b949e" font-size="8.5">12 层架构 · Tolaria MCP</text>
+  </g>
+
+  <g class="branch b3">
+    <line x1="220" y1="130" x2="100" y2="158" stroke="#10b981" stroke-width=".8" class="conn" opacity=".3" style="animation-delay:.8s"/>
+    <rect x="20" y="148" width="145" height="36" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="92" y="164" text-anchor="middle" fill="#c9d1d9" font-size="10" font-weight="600">CodeGraph</text>
+    <text x="92" y="176" text-anchor="middle" fill="#8b949e" font-size="8.5">代码图谱</text>
+  </g>
+
+  <!-- Branch: Methodology (bottom) -->
+  <g class="branch b2">
+    <line x1="380" y1="235" x2="300" y2="270" stroke="#f59e0b" stroke-width="1" class="conn" opacity=".5" style="animation-delay:.5s"/>
+    <circle cx="300" cy="270" r="28" fill="#f59e0b" opacity=".1"/>
+    <circle cx="300" cy="270" r="28" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="300" y="266" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="600">天枢</text>
+    <text x="300" y="278" text-anchor="middle" fill="#f59e0b" font-size="9">DSPBRSE</text>
+  </g>
+
+  <g class="branch b3">
+    <line x1="275" y1="280" x2="180" y2="290" stroke="#f59e0b" stroke-width=".8" class="conn" opacity=".3" style="animation-delay:.7s"/>
+    <rect x="70" y="275" width="145" height="36" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="142" y="292" text-anchor="middle" fill="#c9d1d9" font-size="10" font-weight="600">82 可组合技能</text>
+    <text x="142" y="304" text-anchor="middle" fill="#8b949e" font-size="8.5">57 主技能 + 25 子技能</text>
+  </g>
+
+  <g class="branch b3">
+    <line x1="280" y1="295" x2="180" y2="330" stroke="#f59e0b" stroke-width=".8" class="conn" opacity=".3" style="animation-delay:.9s"/>
+    <rect x="70" y="318" width="145" height="36" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="142" y="335" text-anchor="middle" fill="#c9d1d9" font-size="10" font-weight="600">5 AI 运行时治理</text>
+    <text x="142" y="347" text-anchor="middle" fill="#8b949e" font-size="8.5">CC · QW · TRAE · Alice · Codex</text>
+  </g>
+
+  <!-- ═══ Product Detail Cards Row ═══ -->
+  <g class="title">
+    <rect x="30" y="375" width="740" height="1" fill="#30363d" opacity=".5"/>
+    <text x="400" y="400" text-anchor="middle" fill="#8b949e" font-size="10" letter-spacing="2">PRODUCT DETAILS</text>
+  </g>
+
+  <!-- AWKN Agent detail -->
+  <g class="card c0">
+    <rect x="30" y="415" width="240" height="56" rx="8" fill="#161b22" stroke="#6366f1" stroke-width="1"/>
+    <rect x="30" y="415" width="240" height="3" rx="1.5" fill="url(#accent)"/>
+    <text x="46" y="438" fill="#c9d1d9" font-size="11" font-weight="600">AWKN Agent</text>
+    <text x="46" y="455" fill="#8b949e" font-size="9.5">React 19 + Bun + Electron + SQLite</text>
+    <text x="46" y="465" fill="#6366f1" font-size="8">有工程方法论底色的 AI 智能体</text>
+  </g>
+
+  <!-- 张半山 detail -->
+  <g class="card c1">
+    <rect x="280" y="415" width="240" height="56" rx="8" fill="#161b22" stroke="#6366f1" stroke-width="1"/>
+    <rect x="280" y="415" width="240" height="3" rx="1.5" fill="url(#accent)"/>
+    <text x="296" y="438" fill="#c9d1d9" font-size="11" font-weight="600">张半山 · 人生决策宗师</text>
+    <text x="296" y="455" fill="#8b949e" font-size="9.5">NestJS + Prisma + React 18</text>
+    <text x="296" y="465" fill="#6366f1" font-size="8">AI 人生决策顾问（东方命理量化）</text>
+  </g>
+
+  <!-- Hindsight detail -->
+  <g class="card c2">
+    <rect x="530" y="415" width="240" height="56" rx="8" fill="#161b22" stroke="#10b981" stroke-width="1"/>
+    <rect x="530" y="415" width="240" height="3" rx="1.5" fill="url(#emerald)"/>
+    <text x="546" y="438" fill="#c9d1d9" font-size="11" font-weight="600">Hindsight</text>
+    <text x="546" y="455" fill="#8b949e" font-size="9.5">Python + LanceDB + Docker</text>
+    <text x="546" y="465" fill="#10b981" font-size="8">语义记忆引擎 · LongMemEval SOTA</text>
+  </g>
+
+  <!-- ANNIE detail -->
+  <g class="card c3">
+    <rect x="30" y="480" width="240" height="30" rx="6" fill="#161b22" stroke="#a855f7" stroke-width="1"/>
+    <text x="46" y="500" fill="#c9d1d9" font-size="10.5" font-weight="600">ANNIE 健身教练</text>
+    <text x="180" y="500" fill="#8b949e" font-size="9">Vue.js + MiniMax + ONNX</text>
+  </g>
+
+  <!-- PRI detail -->
+  <g class="card c4">
+    <rect x="280" y="480" width="240" height="30" rx="6" fill="#161b22" stroke="#ef4444" stroke-width="1"/>
+    <text x="296" y="500" fill="#c9d1d9" font-size="10.5" font-weight="600">PRI 决策枢密院</text>
+    <text x="424" y="500" fill="#8b949e" font-size="9">PRD 全流程 · 12 子技能</text>
+  </g>
+
+  <!-- 记忆系统 detail -->
+  <g class="card c5">
+    <rect x="530" y="480" width="240" height="30" rx="6" fill="#161b22" stroke="#10b981" stroke-width="1"/>
+    <text x="546" y="500" fill="#c9d1d9" font-size="10.5" font-weight="600">记忆系统</text>
+    <text x="622" y="500" fill="#8b949e" font-size="9">12 层 · Tolaria MCP · 跨运行时</text>
+  </g>
+
+</svg>

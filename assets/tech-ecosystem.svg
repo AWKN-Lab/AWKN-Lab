@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Segoe UI', 'Noto Sans SC', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }
+    @keyframes orbitSpin { from { stroke-dashoffset:0 } to { stroke-dashoffset:-40 } }
+    @keyframes pulse { 0%,100% { opacity:.4 } 50% { opacity:1 } }
+    @keyframes float { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-3px) } }
+    .title { animation: fadeIn .6s ease both }
+    .runtime { animation: fadeUp .5s ease both }
+    .r0{animation-delay:.1s}.r1{animation-delay:.2s}.r2{animation-delay:.3s}.r3{animation-delay:.4s}.r4{animation-delay:.5s}
+    .llm { animation: fadeUp .4s ease both }
+    .l0{animation-delay:.6s}.l1{animation-delay:.65s}.l2{animation-delay:.7s}.l3{animation-delay:.75s}
+    .l4{animation-delay:.8s}.l5{animation-delay:.85s}.l6{animation-delay:.9s}.l7{animation-delay:.95s}
+    .principle { animation: fadeUp .5s ease both }
+    .p0{animation-delay:.4s}.p1{animation-delay:.5s}.p2{animation-delay:.6s}.p3{animation-delay:.7s}
+    .orbit-ring { stroke-dasharray:8 6; animation: orbitSpin 8s linear infinite }
+    .glow-dot { animation: pulse 2.5s ease infinite }
+    .float { animation: float 3s ease infinite }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="440" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <g class="title">
+    <text x="400" y="35" text-anchor="middle" fill="#8b949e" font-size="11" letter-spacing="3">TECH ECOSYSTEM &amp; PRINCIPLES</text>
+    <text x="400" y="58" text-anchor="middle" fill="#c9d1d9" font-size="16" font-weight="600">
+      天枢之道 · 技术生态
+    </text>
+    <text x="400" y="78" text-anchor="middle" fill="#8b949e" font-size="11">
+      上下文 + 目标 + 约束 + 验证 = 稳定的 AI Coding
+    </text>
+  </g>
+
+  <!-- ═══ Left: AI Runtimes Orbit ═══ -->
+  <g class="title">
+    <text x="210" y="115" text-anchor="middle" fill="#c9d1d9" font-size="12" font-weight="600">5 AI 运行时</text>
+  </g>
+
+  <!-- Orbit rings -->
+  <circle cx="210" cy="200" r="55" fill="none" stroke="#30363d" stroke-width="1" class="orbit-ring"/>
+  <circle cx="210" cy="200" r="85" fill="none" stroke="#30363d" stroke-width=".5" class="orbit-ring" style="animation-direction:reverse"/>
+
+  <!-- Center: DSPBRSE Core -->
+  <circle cx="210" cy="200" r="24" fill="#6366f1" opacity=".15"/>
+  <circle cx="210" cy="200" r="24" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="210" y="196" text-anchor="middle" fill="#6366f1" font-size="10" font-weight="700">DSPBRSE</text>
+  <text x="210" y="210" text-anchor="middle" fill="#8b949e" font-size="8">统一治理</text>
+
+  <!-- Runtime nodes on orbit -->
+  <g class="runtime r0">
+    <circle cx="210" cy="115" r="16" fill="#161b22" stroke="#6366f1" stroke-width="1.5"/>
+    <text x="210" y="112" text-anchor="middle" fill="#c9d1d9" font-size="7.5" font-weight="600">Claude</text>
+    <text x="210" y="122" text-anchor="middle" fill="#8b949e" font-size="7">Code</text>
+    <circle cx="210" cy="115" r="3" fill="#6366f1" class="glow-dot" opacity=".6"/>
+  </g>
+
+  <g class="runtime r1">
+    <circle cx="280" cy="160" r="16" fill="#161b22" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="280" y="157" text-anchor="middle" fill="#c9d1d9" font-size="7.5" font-weight="600">Qoder</text>
+    <text x="280" y="167" text-anchor="middle" fill="#8b949e" font-size="7">Work</text>
+    <circle cx="280" cy="160" r="3" fill="#8b5cf6" class="glow-dot" opacity=".6" style="animation-delay:.5s"/>
+  </g>
+
+  <g class="runtime r2">
+    <circle cx="265" cy="248" r="16" fill="#161b22" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="265" y="245" text-anchor="middle" fill="#c9d1d9" font-size="7.5" font-weight="600">TRAE</text>
+    <text x="265" y="255" text-anchor="middle" fill="#8b949e" font-size="7">CN</text>
+    <circle cx="265" cy="248" r="3" fill="#22d3ee" class="glow-dot" opacity=".6" style="animation-delay:1s"/>
+  </g>
+
+  <g class="runtime r3">
+    <circle cx="155" cy="248" r="16" fill="#161b22" stroke="#f0c040" stroke-width="1.5"/>
+    <text x="155" y="251" text-anchor="middle" fill="#c9d1d9" font-size="7.5" font-weight="600">Alice</text>
+    <circle cx="155" cy="248" r="3" fill="#f0c040" class="glow-dot" opacity=".6" style="animation-delay:1.5s"/>
+  </g>
+
+  <g class="runtime r4">
+    <circle cx="140" cy="160" r="16" fill="#161b22" stroke="#f87171" stroke-width="1.5"/>
+    <text x="140" y="163" text-anchor="middle" fill="#c9d1d9" font-size="7.5" font-weight="600">Codex</text>
+    <circle cx="140" cy="160" r="3" fill="#f87171" class="glow-dot" opacity=".6" style="animation-delay:2s"/>
+  </g>
+
+  <!-- ═══ Right: LLM Integrations ═══ -->
+  <g class="title">
+    <text x="590" y="115" text-anchor="middle" fill="#c9d1d9" font-size="12" font-weight="600">LLM 集成 · 8 大模型</text>
+  </g>
+
+  <g class="llm l0">
+    <rect x="440" y="135" width="130" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="456" cy="148" r="4" fill="#6366f1"/>
+    <text x="468" y="152" fill="#c9d1d9" font-size="10">DeepSeek</text>
+  </g>
+  <g class="llm l1">
+    <rect x="580" y="135" width="130" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="596" cy="148" r="4" fill="#10b981"/>
+    <text x="608" y="152" fill="#c9d1d9" font-size="10">GLM (智谱)</text>
+  </g>
+  <g class="llm l2">
+    <rect x="440" y="168" width="130" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="456" cy="181" r="4" fill="#f59e0b"/>
+    <text x="468" y="185" fill="#c9d1d9" font-size="10">MiniMax</text>
+  </g>
+  <g class="llm l3">
+    <rect x="580" y="168" width="130" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="596" cy="181" r="4" fill="#22d3ee"/>
+    <text x="608" y="185" fill="#c9d1d9" font-size="10">Moonshot</text>
+  </g>
+  <g class="llm l4">
+    <rect x="440" y="201" width="130" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="456" cy="214" r="4" fill="#ef4444"/>
+    <text x="468" y="218" fill="#c9d1d9" font-size="10">DashScope</text>
+  </g>
+  <g class="llm l5">
+    <rect x="580" y="201" width="130" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="596" cy="214" r="4" fill="#10b981"/>
+    <text x="608" y="218" fill="#c9d1d9" font-size="10">OpenAI</text>
+  </g>
+  <g class="llm l6">
+    <rect x="440" y="234" width="130" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="456" cy="247" r="4" fill="#a855f7"/>
+    <text x="468" y="251" fill="#c9d1d9" font-size="10">Anthropic</text>
+  </g>
+  <g class="llm l7">
+    <rect x="580" y="234" width="130" height="26" rx="13" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="596" cy="247" r="4" fill="#8b949e"/>
+    <text x="608" y="251" fill="#c9d1d9" font-size="10">Ollama</text>
+  </g>
+
+  <!-- ═══ Bottom: 4 Principles ═══ -->
+  <rect x="30" y="290" width="740" height="1" fill="#30363d" opacity=".5"/>
+
+  <g class="title">
+    <text x="400" y="315" text-anchor="middle" fill="#c9d1d9" font-size="12" font-weight="600">天枢之道 · 四大原则</text>
+  </g>
+
+  <!-- Principle 1 -->
+  <g class="principle p0">
+    <rect x="30" y="335" width="175" height="90" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="30" y="335" width="175" height="3" rx="1.5" fill="#6366f1"/>
+    <text x="117" y="360" text-anchor="middle" fill="#6366f1" font-size="18">&#x1F441;</text>
+    <text x="117" y="380" text-anchor="middle" fill="#c9d1d9" font-size="11" font-weight="600">天枢之眼</text>
+    <text x="117" y="398" text-anchor="middle" fill="#8b949e" font-size="9">四维清晰度门禁</text>
+    <text x="117" y="412" text-anchor="middle" fill="#8b949e" font-size="9">杜绝带病开工</text>
+  </g>
+
+  <!-- Principle 2 -->
+  <g class="principle p1">
+    <rect x="220" y="335" width="175" height="90" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="220" y="335" width="175" height="3" rx="1.5" fill="#a855f7"/>
+    <text x="307" y="360" text-anchor="middle" fill="#a855f7" font-size="18">&#x267B;</text>
+    <text x="307" y="380" text-anchor="middle" fill="#c9d1d9" font-size="11" font-weight="600">摇光之续</text>
+    <text x="307" y="398" text-anchor="middle" fill="#8b949e" font-size="9">同一错误 3 次</text>
+    <text x="307" y="412" text-anchor="middle" fill="#8b949e" font-size="9">→ 自动晋升 learned rule</text>
+  </g>
+
+  <!-- Principle 3 -->
+  <g class="principle p2">
+    <rect x="410" y="335" width="175" height="90" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="410" y="335" width="175" height="3" rx="1.5" fill="#f59e0b"/>
+    <text x="497" y="360" text-anchor="middle" fill="#f59e0b" font-size="18">&#x2699;</text>
+    <text x="497" y="380" text-anchor="middle" fill="#c9d1d9" font-size="11" font-weight="600">只编排不执行</text>
+    <text x="497" y="398" text-anchor="middle" fill="#8b949e" font-size="9">天枢引擎调度导航</text>
+    <text x="497" y="412" text-anchor="middle" fill="#8b949e" font-size="9">能力委托七颗星辰</text>
+  </g>
+
+  <!-- Principle 4 -->
+  <g class="principle p3">
+    <rect x="600" y="335" width="175" height="90" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="600" y="335" width="175" height="3" rx="1.5" fill="#10b981"/>
+    <text x="687" y="360" text-anchor="middle" fill="#10b981" font-size="18">&#x1F310;</text>
+    <text x="687" y="380" text-anchor="middle" fill="#c9d1d9" font-size="11" font-weight="600">跨运行时统一</text>
+    <text x="687" y="398" text-anchor="middle" fill="#8b949e" font-size="9">一套星图</text>
+    <text x="687" y="412" text-anchor="middle" fill="#8b949e" font-size="9">五个运行时共享</text>
+  </g>
+
+</svg>
