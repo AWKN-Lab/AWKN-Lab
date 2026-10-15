@@ -1,10 +1,10 @@
 # AWKN Lab 技术选型规则与现有项目清单
 
-> 文件定位：`D:\awkn-lab\TECH-STACK-POLICY.md`（本机预定路径；Git 备份存放于 `AWKN-Lab/AWKN-Lab` 根目录）  
+> 文件位置：本机 `D:\awkn-lab\docs\TECH-STACK-POLICY.md`；Git `AWKN-Lab/AWKN-Lab/TECH-STACK-POLICY.md`。  
 > 制定日期：2026-10-16  
-> 状态：`GIT_SAVED / REMOTE_EVIDENCE_ONLY / LOCAL_WRITE_PENDING`  
+> 状态：`LOCAL_COPY_VERIFIED / GIT_SAVED / PROJECT_STACK_VERIFICATION_PENDING`  
 > 本轮依据：GitHub 已连接仓库的 README、`package.json`、`pyproject.toml`、工程文档、状态文档及此前的 `ai-stack-audit-20261016.md`。  
-> 证据限制：本机 ENO 与 LAY 文件接口本轮返回内部错误；Desktop Commander 设备 `eno` 为 Offline。尚未复验 `D:\awkn-lab` 根目录及各本地工作树，未执行本地构建、写入或部署。本文件保存至 Git 仓库根目录；本机尚未写入。完成本机根目录规范核对与同步后，方可将本地应用状态改为 `ACTIVE`。
+> 验证边界：ENO 已恢复目录读取、文件写入和读回；确认 `D:\awkn-lab` 目录治理规则。根目录新文件创建被 ENO 写入策略拒绝，因此将本地副本保存至已有 `docs` 目录。Git 与本地文档正文已核对一致。各项目本地工作树、完整运行门禁及生产环境仍待独立复验；未执行构建、迁移或部署。
 
 ## 一、总裁决
 
